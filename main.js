@@ -193,7 +193,7 @@ window.NPFv4 = (action) => {
     if(!document.querySelector("[post-type='text']") && document.querySelector(`script[src*="assets.tumblr.com/assets/scripts/customize"]`) && !document.getElementById("npf-v4-reminder")){
       let bar = document.createElement("div")
       bar.id = "npf-v4-reminder"
-      bar.innerHTML = `<b>NPF v4</b> warning: <code>post-type="{PostType}"</code> does not appear to be present in your theme. <a href="https://gitlab.com/glen-npf/v4-beta" target="_blank">Please add it to your posts selector</a> to get it working!`
+      bar.innerHTML = `<b>NPF v4</b> warning: <code>post-type="{PostType}"</code> does not appear to be present in your theme. <a href="https://github.com/glenthemes/npf-images-v4?tab=readme-ov-file#step-3-add-post-typeposttype-to-your-posts" target="_blank">Please add it to your posts selector</a> to get it working!`
       if(!document.querySelector(`link[href*="//assets.tumblr.com/fonts/favorit/stylesheet.css"][rel="stylesheet"]`)){
         let s = document.createElement("link")
         s.href = `https://assets.tumblr.com/fonts/favorit/stylesheet.css`
