@@ -349,7 +349,8 @@ Checklist of things to include when asking for help:
 
 ---
 
-If you made it this far, thank you!  
-Please consider [sending me a donation](https://ko-fi.com/glenthemes) if you found this fix useful! It helps me out a lot 💖
+If you made it this far, thank you!
+
+Please consider [sharing the post](https://glenthemes.tumblr.com/post/809281585459396608/npf-images-v4) or [sending me a donation](https://ko-fi.com/glenthemes) if you found this fix useful! It helps me out a lot 💖
 
 🌟 HT ⋆ glenthemes
