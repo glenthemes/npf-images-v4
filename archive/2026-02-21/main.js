@@ -3,7 +3,7 @@
     NPF images fix v4.0 by @glenthemes [2026]
     github.com/glenthemes/npf-images-v4
     
-    [#] Last updated: 2026-02-22 3:50AM [PST]
+    [#] Last updated: 2026-02-21 12:08AM [PST]
     [#] Changelog: github.com/glenthemes/npf-images-v4/changes.md
       
 -------------------------------------------------------------------*/
@@ -186,15 +186,6 @@ window.NPFv4 = (action) => {
       })//end row each
     }//end: npfRowPaddedBoxHeight
 
-    function removeCommentOrComments(currentEntry,anchor){
-      let nextComment = currentEntry.nextElementSibling
-      if(!nextComment || (nextComment && nextComment.innerHTML.trim() == "")){
-        anchor.remove()
-      } else {
-        currentEntry.remove()
-      }
-    }                        
-
     /*+++++++++ ACTUAL NPF V4 +++++++++*/
     // check if user has added post-type="{PostType}" to their posts sel
     // if not, show a small popup reminder
@@ -240,39 +231,17 @@ window.NPFv4 = (action) => {
     }
 
     // VIDEOS: wrap parentless .tmblr-full
-    // user did not use glen's npf video plugin
     for(let v of document.querySelectorAll(`${posts_str} [data-npf*='"type":"video"'], ${posts_str} .tmblr-embed.tmblr-full`)){
       npfMediaWrap(v, {
         addType: "video_row"
       })
     }
-
-    // VIDEOS: wrap glen's npf video plugin if it exists (rather than the raw video snippets)
-    for(let v of document.querySelectorAll(`${text_posts_str} .vidyo-video-container`)){
-      if(!v.closest(".npf_video_row")){
-        makeRow({
-          wrap: v,
-          addType: "video_row"
-        })
-      }
-    }
     
     // AUDIOS: wrap parentless .tmblr-full
-    // (user did not use glen's npf audio plugin
     for(let a of document.querySelectorAll(`${posts_str} [data-npf*='"type":"audio"'], ${posts_str} iframe[class*="_audio_player"], ${posts_str} .tmblr-full > figcaption.audio-caption`)){
       npfMediaWrap(a, {
         addType: "audio_row"
       })
-    }
-
-    // AUDIOS: wrap glen's npf audio plugin if it exists (rather than the raw audio snippets)
-    for(let a of document.querySelectorAll(`${posts_str} .npf-audio-wrapper`)){
-      if(!a.closest(".npf_audio_row")){
-        makeRow({
-          wrap: a,
-          addType: "audio_row"
-        })
-      }
     }
 
     // IMAGES: LEGACY inline images: add <a> anchor to images that don't have them
@@ -532,7 +501,7 @@ window.NPFv4 = (action) => {
       /*========= [CASE: 1] UNNESTED CAPTIONS =========*/
       // unnested captions by neothm & magnusthemes: neothm.com/post/148902138319
       if((window.jQuery || window.$) && $().unnest){
-        // console.log("captions style: unnested");
+        // console.log("captions style: unnested")
 
         (!hasEntry && document.querySelector(".tumblr_parent")) ? entryName == ".tumblr_parent" : null // fallback to neo/bev's defaults if not specified
 
@@ -587,9 +556,8 @@ window.NPFv4 = (action) => {
                 if(opts.addSource == "yes" || opts.addSource === true){
                   let findLink = anchor.querySelector("a[href*='tumblr.com/']")
                   if(findLink){
-                    let opDupe = document.createElement("a")
-                    opDupe.href = findLink.href
-                    opDupe.textContent = findLink.textContent
+                    let opDupe = findLink.cloneNode(true)
+                    opDupe.matches("[class]") && opDupe.removeAttribute("class")
 
                     if(opDupe.textContent.trim() !== ""){
                       let sourceP = document.createElement("p")
@@ -599,21 +567,23 @@ window.NPFv4 = (action) => {
 
                       // user has specified a text block container
                       if(anchor !== currentEntry){
-                        anchor.after(sourceP)
-
-                        removeCommentOrComments(currentEntry,anchor)
+                        anchor.append(sourceP)
+                        currentEntry.remove()
                       }
                       
                       // no text block container, therefore place the source AFTER all the reblogs
                       else {
                         let fnparent = currentEntry.parentNode
-                        fnparent.after(sourceP)
-                        currentEntry.remove()
+                        let lastEntry = fnparent.querySelector(`:scope > ${entryName}:last-of-type`)
+                        if(lastEntry){
+                          lastEntry.after(sourceP)
+                          currentEntry.remove()
+                        }
                       }
                     }
                   }//end: has link, likely a reblog
                 } else {
-                  removeCommentOrComments(currentEntry,anchor)
+                  currentEntry.remove()
                 }              
               }//end: no .next(), can remove current entry
             }//end no .prev(), can prepend
@@ -714,7 +684,6 @@ window.NPFv4 = (action) => {
 
           // is original post
           if(!npf_inst.closest(entryName)){
-            captionName == "" ? captionName = ".text" : null
             let caption = npf_inst.closest(captionName)
             if(caption){
               let prev = npf_inst.previousElementSibling
@@ -766,12 +735,10 @@ window.NPFv4 = (action) => {
                   let findLink = currentEntry.querySelector("a[href*='tumblr.com/']")
                   npf_inst.classList.add("npf-no-caption")
 
-                  // origin has no caption + add source
                   if(opts.addSource == "yes" || opts.addSource === true){
                     if(findLink){
-                      let opDupe = document.createElement("a")
-                      opDupe.href = findLink.href
-                      opDupe.textContent = findLink.textContent
+                      let opDupe = findLink.cloneNode(true)
+                      opDupe.matches("[class]") && opDupe.removeAttribute("class")
 
                       if(opDupe.textContent.trim() !== ""){
                         let sourceP = document.createElement("p")
@@ -788,8 +755,7 @@ window.NPFv4 = (action) => {
                         // no text block container, therefore place the source AFTER all the reblogs
                         else {
                           let fnparent = currentEntry.parentNode
-                          let lastEntry = fnparent.querySelector(`:scope > ${entryName}:not(:has(~ ${entryName}))`)
-
+                          let lastEntry = fnparent.querySelector(`:scope > ${entryName}:last-of-type`)
                           if(lastEntry){
                             lastEntry.after(sourceP)
                             currentEntry.remove()
@@ -797,32 +763,9 @@ window.NPFv4 = (action) => {
                         }
                       }
                     }//end: has link, likely a reblog
-                  }//end: origin has no caption + add source
-                  
-                  // origin has no next + no caption + don't add source
-                  else {
-                    let nextComment = currentEntry.nextElementSibling
-                    
-                    // no additional comment(s)
-                    if(!nextComment || (nextComment && nextComment.innerHTML.trim() == "")){
-                      // text block container exists, therefore remove text container
-                      if(anchor !== currentEntry){
-                        anchor.remove()
-                      }
-
-                      // no text block container, therefore remove all comments
-                      else {
-                        let fnparent = currentEntry.parentNode
-                        fnparent.querySelectorAll(`:scope > ${entryName}`)?.forEach(x => x.remove())
-                      }
-                    }
-
-                    // has additional comment
-                    // e.g.: devsmaycry.tumblr.com/post/796323133744431104
-                    else {
-                      currentEntry.remove()
-                    }
-                  }//end: origin has no next + no caption + don't add source
+                  } else {
+                    currentEntry.remove()
+                  }              
                 }//end: no .next(), can remove current entry
               }//end no .prev(), can prepend
             }//end: is original entry (OP post)

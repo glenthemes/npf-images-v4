@@ -75,7 +75,7 @@ blockquote {
 <style npf-v4-settings>
 :root {
     --NPF-Text-Container:".text-block";
-    --NPF-Reblogs-Selector:".text-body";
+    --NPF-Reblogs-Selector:"";
     --NPF-Move-To-Top:"yes";
     --NPF-Captionless-Add-Source:"yes";
     --NPF-Change-Post-Type:"yes";

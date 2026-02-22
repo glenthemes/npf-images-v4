@@ -157,10 +157,8 @@ a.post_media_photo_anchor {
   width:100%;
 }
 
-/* npf post source */
-.npf-post-source:not(:last-child){
-  margin-top:1em;
-}
+/* npf post source: remove any profile pics */
+.npf-post-source img { display:none!important }
 
 /* npf v4 warning toast (bottom of screen) (only visible on customize pages) */
 #npf-v4-reminder {
