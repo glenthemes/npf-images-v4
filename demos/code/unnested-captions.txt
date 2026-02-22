@@ -117,7 +117,7 @@ $(document).ready(function(){
 <style npf-v4-settings>
 :root {
     --NPF-Text-Container:".text-block";
-    --NPF-Reblogs-Selector:".text-body";
+    --NPF-Reblogs-Selector:".tumblr_parent";
     --NPF-Move-To-Top:"yes";
     --NPF-Captionless-Add-Source:"yes";
     --NPF-Change-Post-Type:"yes";

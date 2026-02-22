@@ -64,7 +64,7 @@ Before we begin, please familiarize yourself with the Tumblr HTML editor's searc
 
 #### Step 1: Add the essentials:
 
-Paste the following **above** `</body>` in your theme code:
+Paste the following **above** `</head>` in your theme code:
 ```html
 <!--  NPF images fix v4.0 by glenthemes [2026]  --->
 <!--     github.com/glenthemes/npf-images-v4     -->
@@ -83,6 +83,8 @@ Paste the following **above** `</body>` in your theme code:
 </style>
 <script>NPFv4()</script>
 ```
+
+☝️ You can also try putting it just **above** `</body>` if it doesn't seem to do anything!
 
 #### Step 2: Enable high-quality images on posts:
 
