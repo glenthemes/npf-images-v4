@@ -54,7 +54,6 @@ window.NPFv4 = (action) => {
 
     // [func] reassign post type
     function reassignPostType(post,npf_inst){
-      console.log(post)
       if(post && npf_inst && opts.changePostType && (opts.changePostType == "yes" || opts.changePostType === true)){
         let classes = npf_inst.getAttribute("class")
         post.setAttribute("post-type",
@@ -504,7 +503,7 @@ window.NPFv4 = (action) => {
       if((window.jQuery || window.$) && $().unnest){
         // console.log("captions style: unnested")
 
-        !hasEntry ? entryName == ".tumblr_parent" : null // fallback to neo/bev's defaults if not specified
+        (!hasEntry && document.querySelector(".tumblr_parent")) ? entryName == ".tumblr_parent" : null // fallback to neo/bev's defaults if not specified
 
         // is original post
         if(hasCaption && !selExists(entryName)){
