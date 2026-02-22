@@ -1,0 +1,208 @@
+/* remove margins & padding */
+.npf_row, .npf_col, .tmblr-full, .tmblr-full img:not(.npf_audio img){
+  margin:0!important;
+  padding:0!important;
+}
+
+/* npf row */
+.npf_row {
+  width:100%!important;
+  align-items:flex-start!important;
+}
+
+/* npf spacing: ROW */
+.npf_inst > * + *,
+.npf_inst + .npf_inst,
+.npf_row + .npf_row {
+  margin-top:var(--NPF-Images-Spacing)!important;
+}
+
+/* npf spacing: COLUMN */
+.npf_row > * + * {
+  margin-left:var(--NPF-Images-Spacing)!important;
+}
+
+/* npf caption spacing (if prepending) */
+.photo-origin:not(:last-child,:has(+ .npf-post-source)){
+  margin-bottom:var(--NPF-Caption-Spacing);
+}
+
+.tmblr-full img:not(.npf_audio img){
+  position:relative!important; /* remove position:absolute from photos */
+  width:auto; /* stop small images from stretching */
+  min-width:0!important;
+  max-width:100%!important;
+}
+
+/* temporarily v-stretch imgs */
+.npf_col:not([data-ready]),
+.npf_col:not([data-ready]) > * {
+  align-self:stretch!important;
+}
+
+/* npf images: true center */
+.npf_row > .npf_col {
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+
+/* stop images from overflowing */
+.tmblr-full img {
+  max-width:100%;
+}
+
+/* stop npf inline images (.tmblr-full) from being full width */
+/* so for smaller images, clicking the whitespace on the row doesn't activate the lightbox */
+/* example: glen-test.tumblr.com/post/790249320660205568 */
+.npf_photo_row > .tmblr-full {
+  flex:initial!important;
+}
+
+/* [1/2] cursor:pointer to indicate that it's clickable */
+.npf_inst .npf_photo_row img {
+  cursor:pointer;
+}
+
+/* [2/2] remove cursor:pointer from <a> anchors bc it doesn't fit to the image itself */
+a.post_media_photo_anchor {
+  cursor:default!important;
+}
+
+/* npf videos & audio */
+.tmblr-full video, .tmblr-full audio[controls]:not(.npf_audio audio[controls]), .tmblr-full iframe {
+  vertical-align:middle!important;
+  margin:0!important;
+  padding:0!important;
+  width:100%!important;
+  max-width:100%!important;
+}
+
+/* v middle */
+.tmblr-full img {
+  vertical-align:middle;
+}
+
+/* non-image npf media */
+.npf_inst [data-npf*='"type":"audio"'],
+.npf_inst [data-npf*='"type":"video"']{
+  width:100%!important;
+  margin:0!important;
+}
+
+.npf_inst [data-npf*='"type":"audio"'] iframe,
+.npf_inst [data-npf*='"type":"video"'] iframe {
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+}
+
+/* npf overflow hidden */
+.npf_row, .npf_col {
+  overflow:hidden!important;
+}
+
+/* NOT overflow hidden */
+.npf_row:has(p.tmblr-attribution),
+.npf_col:has(p.tmblr-attribution),
+.tmblr-full:has(p.tmblr-attribution){
+  overflow:initial!important;
+}
+
+.npf_row[data-npf-height] .npf_col {
+  height:auto!important;
+}
+
+/* [1/3] npf row height using padded box */
+.npf_row[data-npf-height] .npf_col .tmblr-full {
+  position:relative!important;
+  height:0!important;
+  padding-bottom:var(--npf-img-pct)!important;
+}
+
+/* [2/3] npf row height using padded box */
+.npf_row[data-npf-height] .npf_col .tmblr-full > *:first-child {
+  position:absolute!important;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+}
+
+/* [3/3] npf row height using padded box */
+.npf_row[data-npf-height] .npf_col .tmblr-full > *:not(:first-child){
+  display:none;
+}
+
+/* [1/2] remove potentially unwanted styling from npfs */
+a.post_media_photo_anchor {
+  padding:0!important;
+  border:none!important;
+  box-shadow:none!important;
+}
+
+/* [2/2] remove potentially unwanted styling from npfs */
+.photo-origin img:not(.tumblr_avatar, .audio-caption img, .npf_audio img, .tmblr-full img){
+  border-radius:0!important;
+}
+
+/* npf instances that *aren't* photo-origin: add top gap */
+.npf_inst:not(.photo-origin):not(:first-child){
+  margin-top:1em;
+}
+
+/* npf audios: stretch tmblr-full since it will only ever be 1 per row */
+.npf_row.npf_video_row .tmblr-full,
+.npf_row.npf_audio_row .tmblr-full {
+  width:100%;
+}
+
+/* npf v4 warning toast (bottom of screen) (only visible on customize pages) */
+#npf-v4-reminder {
+  --fs:max(calc(0.85rem * 1.05),calc(13.5px * 1.05));
+  --p:20px;
+  --lh:1.65;
+  position:fixed;
+  bottom:0;left:0;
+  margin:0;padding:0;
+  box-sizing:border-box!important;
+  width:100vw;
+  padding:calc(var(--p) - (((var(--fs) * var(--lh)) - var(--fs)) / 2)) var(--p);
+  background:#f1eed0;
+  border-top:1px solid #e5e9b4;
+  font:bold var(--fs)/var(--lh) "Favorit", sans-serif!important;
+  color:#7e753e!important;
+  z-index:2147483647!important;
+}
+
+#npf-v4-reminder b {
+  font:inherit!important;
+  color:#8a6318!important;
+  -webkit-text-stroke:0.3px currentColor!important;
+}
+
+#npf-v4-reminder code {
+  --fs:max(calc(0.85rem * 0.95),calc(13.5px * 0.95));
+  padding:3px 5px!important;
+  background:rgb(from #7e753e r g b / 12.5%)!important;
+  border:1px solid rgb(from #7e753e r g b / 15%)!important;
+  border-radius:3px!important;
+  font-family:"Source Code Pro", monospace!important;
+  font-size:var(--fs)!important;
+  font-weight:normal!important;
+  color:#5f5938!important;
+  -webkit-text-stroke:0.5px currentColor!important;
+}
+
+#npf-v4-reminder a {
+  color:#2e83e5!important;
+  text-decoration:underline rgb(from #2e83e5 r g b / 30%) 1px!important;
+  text-underline-offset:0.3em!important;
+  text-decoration-skip-ink:auto!important;
+}
+
+#npf-v4-reminder, #npf-v4-reminder b, #npf-v4-reminder code, #npf-v4-reminder a {
+  letter-spacing:0!important;
+  word-spacing:0!important;
+  text-transform:initial!important;
+}

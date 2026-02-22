@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- generic theme info -->
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+
+<link href="//assets.tumblr.com/fonts/favorit/stylesheet.css" rel="stylesheet">
+
+<!-- example customize panel options -->
+{block:Options}
+<meta name="color:links" content="#000000">
+{/block:Options}
+
+<!-- example styling -->
+<style>
+body {
+    background:#fcfcfc;
+    font:normal 0.95rem/1.75 "Favorit", sans-serif;
+    color:#383c45;
+}
+
+#container {
+    margin:50px auto;
+    width:min(85vw,540px);
+    display:grid;
+    grid-auto-flow:row;
+    row-gap:35px;
+}
+
+#container iframe, #container video {
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+
+img { vertical-align:middle }
+
+a {
+    color:{color:links};
+    text-decoration:underline currentColor 1.5px;
+    text-underline-offset:0.175em;
+    text-decoration-skip-ink:auto;
+}
+
+blockquote {
+    border-left:3px solid #ededed;
+    margin-left:21px;
+    padding-left:21px;
+    margin-right:0;
+}
+
+.posts {
+    position:relative;
+}
+
+.reblog-user-header {
+    display:flex;
+    align-items:center;
+    column-gap:12px;
+}
+
+.reblog-user-header img {
+    display:block;
+    width:44px;
+    border-radius:100%;
+    flex-shrink:0;
+    font-size:1rem;
+}
+
+.reblog-user-header a {
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.reblog-content > .npf_inst:first-child {
+    margin-top:1em;
+}
+
+.posts + hr {
+    display:block;
+    width:100%;
+    height:1px;
+    background:#efefef;
+    border:none;
+}
+
+.posts + hr:last-child {
+    display:none;
+}
+</style>
+
+<!--  NPF images fix v4.0 by glenthemes [2026]  --->
+<!--     github.com/glenthemes/npf-images-v4     -->
+<link href="//glenthemes.github.io/npf-images-v4/core.css" rel="stylesheet">
+<script src="//glenthemes.github.io/npf-images-v4/main.css"></script>
+<style npf-v4-settings>
+:root {
+    --NPF-Text-Container:".text-block";
+    --NPF-Reblogs-Selector:".text-body";
+    --NPF-Move-To-Top:"yes";
+    --NPF-Captionless-Add-Source:"yes";
+    --NPF-Change-Post-Type:"yes";
+    --NPF-Caption-Spacing:1em;
+    --NPF-Images-Spacing:4px;
+}
+</style>
+<script>NPFv4()</script>
+
+</head>
+<body>
+
+<div id="container">
+    {block:Posts}
+    <div class="posts" id="{PostID}" post-type="{PostType}">
+    
+        {block:Text}
+        <div class="text-block">
+            <!-- [all] text posts: title (if it exists) -->
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+            
+            <!-- [all] text posts: contents -->
+            <div class="text-body">
+                {Body}
+            </div>
+        </div><!--end text-block-->
+        {/block:Text}
+
+        <!-- ...add your other legacy post types' markup here -->
+    
+    </div><!--end posts-->
+    
+    <hr/>
+    {/block:Posts}
+</div><!--end container-->
+
+</body>
+</html>

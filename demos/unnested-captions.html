@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- generic theme info -->
+<title>PREVIEW: unnested captions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
+
+<!-- tumblr sheets & links that are automatically inserted on your blog -->
+<link href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css" rel="stylesheet">
+<script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js"></script>
+
+<!-- favorit font from tumblr -->
+<link href="https://assets.tumblr.com/fonts/favorit/stylesheet.css" rel="stylesheet">
+
+<!-- example styling -->
+<style>
+body {
+    background:#fcfcfc;
+    font:normal 0.95rem/1.75 "Favorit", sans-serif;
+    color:#383c45;
+}
+
+#container {
+    margin:50px auto;
+    width:min(85vw,540px);
+    display:grid;
+    grid-auto-flow:row;
+    row-gap:35px;
+}
+
+#container iframe, #container video {
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+
+img { vertical-align:middle }
+
+a {
+    color:#000000;
+    text-decoration:underline currentColor 1.5px;
+    text-underline-offset:0.175em;
+    text-decoration-skip-ink:auto;
+}
+
+.tumblr_parent blockquote {
+    border-left:3px solid #ededed;
+    margin-left:21px;
+    padding-left:21px;
+    margin-right:0;
+}
+
+hgroup *:first-child { margin-top:0 }
+hgroup *:last-child { margin-bottom:0 }
+hgroup h1:has(+ p){ margin-bottom:0 }
+hgroup h1 + p { margin-top:0 }
+hgroup p:has(+ p){ margin-bottom:0 }
+hgroup p + p { margin-top:0.5em }
+
+.posts {
+    position:relative;
+}
+
+blockquote.tumblr_parent {
+    margin-left:0;
+    margin-right:0;
+}
+
+img.tumblr_avatar, a.tumblr_blog {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+img.tumblr_avatar {
+    width:44px;
+    border-radius:100%!important;
+    font-size:1rem;
+    margin-right:12px;
+}
+
+a.tumblr_blog {
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.posts + hr {
+    display:block;
+    width:100%;
+    height:1px;
+    background:#efefef;
+    border:none;
+}
+
+.posts + hr:last-child {
+    display:none;
+}
+</style>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- unnest captions by neothm & magnusthemes -->
+<!-- neothm.com/post/148902138319 -->
+<script src="https://static.tumblr.com/wgg6svp/a2Wofxa9p/codepensample.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".posts").unnest({
+        yourCaption: ".text-body",
+        wrapName: ".tumblr_parent",
+        newCaptionUsername: true,
+        originalPostCaptionUsername: true,
+        tumblrAvatars: true,
+        tumblrAvatarClass: ".tumblr_avatar",
+        usernameColon: false
+    })
+})
+</script>
+
+<!--  NPF images fix v4.0 by glenthemes [2026]  --->
+<!--     github.com/glenthemes/npf-images-v4     -->
+<link href="../core.css" rel="stylesheet">
+<script src="../main.js"></script>
+<style npf-v4-settings>
+:root {
+    --NPF-Text-Container:".text-block";
+    --NPF-Reblogs-Selector:".tumblr_parent";
+    --NPF-Move-To-Top:"yes";
+    --NPF-Captionless-Add-Source:"yes";
+    --NPF-Change-Post-Type:"yes";
+    --NPF-Caption-Spacing:1em;
+    --NPF-Images-Spacing:4px;
+}
+</style>
+<script>NPFv4()</script>
+
+
+
+</head>
+<body>
+
+<div id="container">
+    <hgroup>
+        <h1>Unnested captions</h1>
+        <p>Uses the <a href="https://neothm.com/post/148902138319">un-nested captions plugin</a> by neothm and magnusthemes</p>
+        <p><a href="./code/unnested-captions.txt">Get the code here</a> (only includes structure for text posts).</p>
+    </hgroup>
+
+    <div class="posts" post-type="text" id="809205204252786688">
+        <div class="text-block">
+            <div class="text-body">
+                <p><a class="tumblr_blog" href="https://glen-px.tumblr.com/post/809204982641475584/nataliya-melnychuk-futc-look-again-digital">glen-px</a>:</p><blockquote><div class="npf_row"><div class="npf_col"><figure class="tmblr-full"><a class="post_media_photo_anchor" data-big-photo="https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s1280x1920/06f13d912271f2adf0b84ccff9517576d01131c7.jpg" data-big-photo-height="2880" data-big-photo-width="1920"><img class="post_media_photo image" src="https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s500x750/9db82333a0007dfa4c3927a62c96356044ba1429.jpg" srcset="https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s75x75_c1/d334c65989104a46d55397d536b00b8dd6fefcef.jpg 75w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s100x200/89f64d519936d3a1b76d76459bd0ed74fd9d0767.jpg 100w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s250x400/db6019a803e5511dc8d1c83d6c6a3fe18cb97d20.jpg 250w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s400x600/22da49e910733a3eb7c910ff5199cc24fe9bad36.jpg 400w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s500x750/9db82333a0007dfa4c3927a62c96356044ba1429.jpg 500w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s540x810/a2e7043edbb3394ca84140c870daaae81c9aa462.jpg 540w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s640x960/ebfe8316f794daa483b6156c9057c9a58ca01333.jpg 640w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s1280x1920/06f13d912271f2adf0b84ccff9517576d01131c7.jpg 1280w, https://64.media.tumblr.com/acac54ae2fde5e3f396b9cdaab61e75e/292d3cf31a8d918a-05/s2048x3072/de33c00e194bd1af0b3315809ef2560bed2414ef.jpg 1920w" sizes="(max-width: 1280px) 100vw, 1280px" alt="image"></a></figure></div><div class="npf_col"><figure class="tmblr-full"><a class="post_media_photo_anchor" data-big-photo="https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s1280x1920/c49d8858f7a4dc317a1e72a62a3fc696df127dab.jpg" data-big-photo-height="1161" data-big-photo-width="1920"><img class="post_media_photo image" src="https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s500x750/c5635cf4fa3816a0186385cbd79786ab3ae15906.jpg" srcset="https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s75x75_c1/8790da5c54a6ff71709261628f615800c387504f.jpg 75w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s100x200/df2c7e21ec24316adce8944dfa52effb7a6586c4.jpg 100w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s250x400/46101ce319bef9f721f97f3172051dcf84fa7597.jpg 250w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s400x600/708d5ea4193ccb831d853ce60b74006fbf439fcd.jpg 400w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s500x750/c5635cf4fa3816a0186385cbd79786ab3ae15906.jpg 500w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s540x810/f21e95c98daacbbbb6b0e241fb7c620e088137c5.jpg 540w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s640x960/0bae124e0c662cf6305da1aa3d2cc04e195d5174.jpg 640w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s1280x1920/c49d8858f7a4dc317a1e72a62a3fc696df127dab.jpg 1280w, https://64.media.tumblr.com/dcd56ed00039ec3de34d1db728f7b478/292d3cf31a8d918a-3b/s2048x3072/3a02590d311aad3662b93d4c7a65d2b537fc7a0a.jpg 1920w" sizes="(max-width: 1280px) 100vw, 1280px" alt="image"></a></figure></div><div class="npf_col"><figure class="tmblr-full"><a class="post_media_photo_anchor" data-big-photo="https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s1280x1920/0185ef1a04359e8eaf1c32d70173eea263f1bba0.jpg" data-big-photo-height="1920" data-big-photo-width="1920"><img class="post_media_photo image" src="https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s500x750/23e67ff9eb29b70b55143b94c265fe31b180b72f.jpg" srcset="https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s75x75_c1/44303a5878f6b1f700090e7ed18de54fa1c20db1.jpg 75w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s100x200/5a05ede1a6ff1603096e002ba332444c2acd5998.jpg 100w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s250x400/cf3fb7d00c5b7ac6be4b290d06b2c8fbde7ce86d.jpg 250w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s400x600/1a9dd539e32c7c87ef12dee1b03a997a95629c8f.jpg 400w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s500x750/23e67ff9eb29b70b55143b94c265fe31b180b72f.jpg 500w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s540x810/40f3269e00d350343682a24e276072e864c25ee1.jpg 540w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s640x960/9b8d4f0b5c9b2912219449cdc095da2b52fb8d81.jpg 640w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s1280x1920/0185ef1a04359e8eaf1c32d70173eea263f1bba0.jpg 1280w, https://64.media.tumblr.com/9f95da27b2f45e536ae3bc3383dfee27/292d3cf31a8d918a-6b/s2048x3072/859a15845edd92c35990cfc08e51a2c669bad601.jpg 1920w" sizes="(max-width: 1280px) 100vw, 1280px" alt="image"></a></figure></div></div><p><a href="https://unsplash.com/photos/xja7_oU6OQ4">Nataliya Melnychuk</a> ♦️ <a href="https://unsplash.com/photos/URrA8WjHmtE">FUTC</a> ♦️ <a href="https://unsplash.com/photos/CTABwjlpu3Q">Look Again Digital</a></p></blockquote>
+            </div><!--end text-body-->
+        </div><!--end text-block-->
+        
+        <!-- <noscript> tag that must be included in order for the lightbox to work -->
+        <noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;Monetization&quot;:{&quot;client_side_waterfall&quot;:false,&quot;no_demand_reason&quot;:null},&quot;TumblelogIframe&quot;:{&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=a98b2f528ad47798c300f3d3c87cb50a&quot;,&quot;tumblelogName&quot;:&quot;&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/64.media.tumblr.com\/ce4ccacf49043e0cff7e30434a77a874\/43c34e719fab0a1d-8f\/s64x64u_c1\/60b8164918d734b9855e3858a1577bf7f0c69b23.pnj&quot;,&quot;tumblelogAvatar128&quot;:&quot;https:\/\/64.media.tumblr.com\/ce4ccacf49043e0cff7e30434a77a874\/43c34e719fab0a1d-8f\/s128x128u_c1\/3904a3c21ccb9d47b526c63cd7b9424cbd7a4d97.pnj&quot;,&quot;tumblelogHost&quot;:&quot;&quot;,&quot;hasCustomDomain&quot;:false,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/64.media.tumblr.com\/ab8f086dbce18ce82fd0e31ce8f5d864\/6b8efe0a967f41a4-c9\/s2048x3072_c24333,0,75533,100000\/b488c1eed06310aeb28ed2253217d9b8c5412336.jpg&quot;,&quot;themeBackgroundColor&quot;:&quot;#000000&quot;,&quot;themeTitleColor&quot;:&quot;#b5b6c0&quot;,&quot;themeAccentColor&quot;:&quot;#6c6b9e&quot;,&quot;brag&quot;:true,&quot;canShowAd&quot;:false,&quot;isPremium&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:&quot;single_post&quot;,&quot;currentPage&quot;:1,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;809205204252786688&quot;,&quot;src&quot;:&quot;&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;openInPeeprUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;showRemoveAdsCta&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showMessagingButton&quot;:false,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;&quot;,&quot;ios&quot;:&quot;&quot;},&quot;appOpenReferrer&quot;:&quot;bn_header_open_btn&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:0,&quot;installUrlOpenFailed&quot;:{&quot;android&quot;:&quot;&quot;,&quot;ios&quot;:&quot;&quot;}},&quot;CommunityLabels&quot;:{&quot;has_community_label&quot;:false,&quot;is_single&quot;:true,&quot;redirect_target&quot;:&quot;&quot;}},&quot;Flags&quot;:{&quot;features&quot;:&quot;&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1771722654000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;}}"></noscript>
+        <script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js"></script>
+    </div><!--end posts-->
+</div><!--end container-->
+</body>
+</html>
