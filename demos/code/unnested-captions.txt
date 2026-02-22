@@ -131,7 +131,7 @@ $(document).ready(function(){
 <body>
 
 <div id="container">
-    {block:Posts}
+    {block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
     <div class="posts" id="{PostID}" post-type="{PostType}">
     
         {block:Text}
