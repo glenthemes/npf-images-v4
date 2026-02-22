@@ -342,7 +342,7 @@ For Tumblr theme *makers*:
 
 If you run into any issues or need help with installing this fix, please reach out to me via my [Discord](https://discord.gg/RcMKnwz).
 
-Checklist of thing to include when asking for help:
+Checklist of things to include when asking for help:
 - A link to your blog, e.g. `https://glen-px.tumblr.com`
 - Clarify which theme you are using, and by whom
 - Send your **full** theme code (tutorial: [glenthemes.notion.site/dpaste-tutorial](https://glenthemes.notion.site/dpaste-tutorial))!
