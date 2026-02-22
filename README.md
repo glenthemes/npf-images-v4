@@ -69,7 +69,7 @@ Paste the following **above** `</body>` in your theme code:
 <!--  NPF images fix v4.0 by glenthemes [2026]  --->
 <!--     github.com/glenthemes/npf-images-v4     -->
 <link href="//glenthemes.github.io/npf-images-v4/core.css" rel="stylesheet">
-<script src="//glenthemes.github.io/npf-images-v4/main.css"></script>
+<script src="//glenthemes.github.io/npf-images-v4/main.js"></script>
 <style npf-v4-settings>
 :root {
     --NPF-Text-Container:".caption";
