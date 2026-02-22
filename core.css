@@ -157,6 +157,9 @@ a.post_media_photo_anchor {
   width:100%;
 }
 
+/* npf post source: remove any profile pics */
+.npf-post-source img { display:none!important }
+
 /* npf v4 warning toast (bottom of screen) (only visible on customize pages) */
 #npf-v4-reminder {
   --fs:max(calc(0.85rem * 1.05),calc(13.5px * 1.05));
