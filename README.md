@@ -331,7 +331,7 @@ Go back to the batch of code you paste from **Step 1**; specifically this sectio
 ### 💖 Attribution:
 
 For Tumblr theme *users*:
-> The credit is already present in the essential NPF scripts pasted; no further attribution is required.
+> The credit is already present in the essential NPF scripts pasted; no further attribution is required. Do not remove the credit.
 
 For Tumblr theme *makers*:
 > You are welcome to use this fix in both free and premium themes; in your credits list or page, please include a link to either [this repository](https://github.com/glenthemes/npf-images-v4), [my Tumblr blog](https://glenthemes.tumblr.com), or [my Tumblr post](https://glenthemes.tumblr.com/post/809281585459396608/npf-images-v4).
