@@ -134,16 +134,6 @@ a.post_media_photo_anchor {
   display:none;
 }
 
-/* npf alt text :: npf photoset ROWS with uneven heights */
-/* example post: tmblr.co/Z2hZ-VhnGo0mOW00 */
-.npf_row > .npf_col:has(.tmblr-full .npf-alt-text-btn, .tmblr-full .tmblr-alt-text-helper){
-  position:relative!important;
-}
-
-.npf_row > .npf_col .tmblr-full:has(.npf-alt-text-btn, .tmblr-alt-text-helper){
-  position:initial!important;
-}
-
 /* [1/2] remove potentially unwanted styling from npfs */
 a.post_media_photo_anchor {
   padding:0!important;
